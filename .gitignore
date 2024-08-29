@@ -1,2 +1,4 @@
 .env
 project-plan.md
+node_modules
+dist
