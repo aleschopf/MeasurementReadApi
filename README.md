@@ -29,7 +29,7 @@ Esta API permite a leitura automatizada de medições de água e gás a partir d
     docker-compose up --build
     ```
 
-3. Para visualizar a documentação da API acesse [Docs](localhost/docs) após iniciar o projeto.
+3. Para visualizar a documentação da API acesse [Docs](http://localhost/docs) após iniciar o projeto.
 
 ## Endpoints
 
