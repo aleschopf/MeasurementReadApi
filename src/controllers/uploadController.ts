@@ -26,12 +26,9 @@ export const imageViewer = (req: Request, res: Response) => {
     const imageName = req.params.imagename;
     const imagePath = path.join(__dirname, '..', 'uploads', imageName);
 
-    // Check if file exists
     if (fs.existsSync(imagePath)) {
-        // Set the appropriate content type
         res.contentType('image/jpeg');
 
-        // Stream the file to the response
         const stream = fs.createReadStream(imagePath);
         stream.pipe(res);
     } else {

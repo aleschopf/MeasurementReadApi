@@ -5,7 +5,6 @@ export const confirmService = async (measureUuid: string, confirmedValue: number
         throw new Error('Invalid input');
     }
 
-
     const measurement = await getMeasurementByUuid(measureUuid);
     if (!measurement) {
         throw new Error('Measurement not found');
