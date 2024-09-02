@@ -1,9 +1,34 @@
 services:
-  app:
-    build: .
+  mysql:
+    build:
+      context: .
+      dockerfile: mysql.dockerfile
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+    volumes:
+      - mysql_data:/var/lib/mysql
+  node_api:
+    build:
+      context: .
+      dockerfile: node.dockerfile
     ports:
       - "80:80"
     environment:
       - GEMINI_API_KEY=${GEMINI_API_KEY}
-    volumes:
-      - ./shopper.sqlite:/app/shopper.sqlite
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+    depends_on:
+      - mysql
+volumes:
+  mysql_data:

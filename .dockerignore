@@ -1,0 +1,5 @@
+node_modules
+shopper.sqlite
+LICENSE
+README.md
+.env
