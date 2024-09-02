@@ -10,7 +10,7 @@ Esta API permite a leitura automatizada de medições de água e gás a partir d
 
 ### Configuração
 
-1. Adicione um arquivo `.env` na raiz do projeto com a chave da API do Gemini:
+1. Adicione um arquivo `.env` na raiz do projeto com a chave da API do Gemini e os dados para geração e conexão do banco de dados:
     ```
     GEMINI_API_KEY=
     DB_HOST=mysql
