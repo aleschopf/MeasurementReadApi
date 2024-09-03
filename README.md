@@ -86,7 +86,7 @@ Este endpoint lista todas as medições realizadas por um cliente específico, f
 | Status Code | Descrição Resposta                                                               | Response body                                                                                                                                           |
 |-------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 200         | Operação realizada com sucesso                                                   | `{ "customer_code": string, "measures": [ { "measure_uuid": string, "measure_datetime": datetime, "measure_type": string, "has_confirmed": boolean, "image_url": string }, { "measure_uuid": string, "measure_datetime": datetime, "measure_type": string, "has_confirmed": boolean, "image_url": string } ] }` |
-| 400         | Parâmetro measure type diferente de WATER, GAS ou ENERRGY                                 | `{ "error_code": "INVALID_TYPE", "error_description": "Tipo de medição não permitida" }`                                                                          |
+| 400         | Parâmetro measure type diferente de WATER, GAS ou ENERGY                                 | `{ "error_code": "INVALID_TYPE", "error_description": "Tipo de medição não permitida" }`                                                                          |
 
 ## Tecnologias Utilizadas
 
