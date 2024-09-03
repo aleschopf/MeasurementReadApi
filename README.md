@@ -43,7 +43,7 @@ Este endpoint recebe uma imagem de um medidor (de água ou gás) em base64, envi
  "image": "base64",
  "customer_code": "string",
  "measure_datetime": "datetime",
- "measure_type": "WATER or GAS"
+ "measure_type": "WATER, GAS or ENERGY"
 }
 ```
 
@@ -79,14 +79,14 @@ Este endpoint confirma ou corrige o valor lido previamente pela API Gemini.
 
 Este endpoint lista todas as medições realizadas por um cliente específico, filtradas pelo tipo de medição (água ou gás).
 
-**Uso:** `{base_url}/<customer_code>/list?measure_type=WATER or GAS`
+**Uso:** `{base_url}/<customer_code>/list?measure_type=WATER, GAS or ENERGY`
 
 **Responses:**
 
 | Status Code | Descrição Resposta                                                               | Response body                                                                                                                                           |
 |-------------|---------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 200         | Operação realizada com sucesso                                                   | `{ "customer_code": string, "measures": [ { "measure_uuid": string, "measure_datetime": datetime, "measure_type": string, "has_confirmed": boolean, "image_url": string }, { "measure_uuid": string, "measure_datetime": datetime, "measure_type": string, "has_confirmed": boolean, "image_url": string } ] }` |
-| 400         | Parâmetro measure type diferente de WATER ou GAS                                 | `{ "error_code": "INVALID_TYPE", "error_description": "Tipo de medição não permitida" }`                                                                          |
+| 400         | Parâmetro measure type diferente de WATER, GAS ou ENERRGY                                 | `{ "error_code": "INVALID_TYPE", "error_description": "Tipo de medição não permitida" }`                                                                          |
 
 ## Tecnologias Utilizadas
 
