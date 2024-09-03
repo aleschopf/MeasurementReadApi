@@ -20,7 +20,7 @@ export const listRouter = express.Router();
  *         required: false
  *         schema:
  *           type: string
- *           enum: [water, gas]
+ *           enum: [water, gas, energy]
  *         description: O tipo de medição (opcional)
  *     responses:
  *       200:

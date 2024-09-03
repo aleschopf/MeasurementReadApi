@@ -28,7 +28,7 @@ export const uploadRouter = express.Router();
  *                 description: Data e hora da medição
  *               measure_type:
  *                 type: string
- *                 enum: [water, gas]
+ *                 enum: [water, gas, energy]
  *                 description: Tipo da medição (água ou gás)
  *     responses:
  *       200:

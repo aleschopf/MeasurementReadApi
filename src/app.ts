@@ -15,7 +15,7 @@ import { connectDatabase } from './config/database';
 const swaggerDefinition = {
         openapi: '3.0.0',
         info: {
-            title: 'Water and Gas Measurement Reader',
+            title: 'Water, Gas and Energy Measurement Reader',
             version: '1.0.0',
             description: 'API documentation for the project',
     },
