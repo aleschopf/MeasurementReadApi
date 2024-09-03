@@ -5,7 +5,7 @@ export const listService = async (customerCode: string, measureType?: string) =>
         throw new Error('Customer code is required');
     }
 
-    if (measureType && !['WATER', 'GAS'].includes(measureType.toUpperCase())) {
+    if (measureType && !['WATER', 'GAS', 'ENERGY'].includes(measureType.toUpperCase())) {
         throw new Error('Invalid measure type');
     }
 
