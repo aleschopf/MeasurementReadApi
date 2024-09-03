@@ -1,6 +1,6 @@
 # Measurement Read API
 
-Esta API permite a leitura automatizada de medições de água e gás a partir de imagens enviadas em base64. O serviço utiliza a API Gemini para processar as imagens e retornar os valores de medição. 
+Esta API permite a leitura automatizada de medições de água, gás e energia a partir de imagens enviadas em base64. O serviço utiliza a API Gemini para processar as imagens e retornar os valores de medição. 
 
 ## Setup
 
@@ -35,7 +35,7 @@ Esta API permite a leitura automatizada de medições de água e gás a partir d
 
 ### 1. `POST /upload`
 
-Este endpoint recebe uma imagem de um medidor (de água ou gás) em base64, envia a imagem para a API Gemini para leitura, e retorna o valor medido.
+Este endpoint recebe uma imagem de um medidor (de água ou gás ou energia) em base64, envia a imagem para a API Gemini para leitura, e retorna o valor medido.
 
 **Request body:**
 ```json
