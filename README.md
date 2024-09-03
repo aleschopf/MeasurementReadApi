@@ -5,8 +5,8 @@ Esta API permite a leitura automatizada de medições de água, gás e energia a
 ## Setup
 
 ### Pré-requisitos
-1. **Docker**: Certifique-se de que o Docker esteja instalado na sua máquina.
-2. **API Key do Gemini**: Você precisará de uma chave de API do Gemini para que o serviço funcione.
+1. [**Docker**](https://docs.docker.com/engine/install/): Certifique-se de que o Docker esteja instalado na sua máquina.
+2. [**API Key do Gemini**](https://aistudio.google.com/app/apikey): Você precisará de uma chave de API do Gemini para que o serviço funcione.
 
 ### Configuração
 
