@@ -15,6 +15,7 @@
         "express": "^4.19.2",
         "fs": "^0.0.1-security",
         "mysql2": "^2.3.3",
+        "node-fetch": "^3.3.2",
         "path": "^0.12.7",
         "reflect-metadata": "^0.1.13",
         "swagger-jsdoc": "^6.2.8",
@@ -24,6 +25,7 @@
         "uuid": "^8.3.2"
     },
     "devDependencies": {
+        "@jest/types": "^29.6.3",
         "@types/express": "^4.17.21",
         "@types/jest": "^27.0.3",
         "@types/node": "^16.11.12",
