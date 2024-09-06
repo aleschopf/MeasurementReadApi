@@ -1,6 +1,7 @@
 import { analyzeImage } from '../src/services/geminiService'
 import fs from 'fs'
 import path from 'path'
+import { getBase64Image } from './helpers'
 const imagePaths = [
     process.cwd()+'/examples/01.png',
     process.cwd()+'/examples/02.jpeg',
@@ -17,10 +18,7 @@ const imageValues = [
     0,
     163,
 ]
-const getBase64Image = (filePath: string) => {
-    const file = fs.readFileSync(filePath);
-    return `${file.toString('base64')}`;
-};
+
 console.log(process.version)
 const images = imagePaths.map(getBase64Image)
 describe('Should test gemini', () => {
