@@ -16,16 +16,15 @@ describe('Should test upload api endpoints', () => {
             promises.push(saveMeasurement(...i));
         });
 
-        data = await Promise.all(promises);  // Aqui você popula `data` corretamente.
+        data = await Promise.all(promises);
     });
 
     test('Data should be defined after beforeAll', () => {
-        expect(data).toBeDefined();  // Esse teste garante que os dados foram carregados.
+        expect(data).toBeDefined();
     });
 
     it.each([0, 1, 2, 3, 4])('Confirm include testing for index %i', async (index) => {
-        // Esse teste será executado para cada índice no array (de 0 a 4).
-        expect(data[index]).toBeTruthy();  // Verifique se a medição existe no índice.
+        expect(data[index]).toBeTruthy();
     });
 
     test('Should patch the confirm endpoint sucessfully', async () => {
@@ -37,7 +36,6 @@ describe('Should test upload api endpoints', () => {
     })
 
     afterAll(() => {
-        // console.log('AfterAll disparado!')
         databaseConnection.close(); 
     })
 });
