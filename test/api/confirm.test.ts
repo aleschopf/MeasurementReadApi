@@ -28,6 +28,14 @@ describe('Should test upload api endpoints', () => {
         expect(data[index]).toBeTruthy();  // Verifique se a medição existe no índice.
     });
 
+    test('Should patch the confirm endpoint sucessfully', async () => {
+        const response = await request(app).patch('/confirm').send({
+            "measure_uuid": data[Math.floor(Math.random() * data.length)].id,
+            "confirmed_value": Math.floor(Math.random() * 5)
+        })
+        expect(response.statusCode).toBe(200);
+    })
+
     afterAll(() => {
         // console.log('AfterAll disparado!')
         databaseConnection.close(); 
